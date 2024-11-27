@@ -1,0 +1,20 @@
+<div id="<%= dom_id category %>">
+  <p>
+    <strong>Name:</strong>
+    <%= category.name %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= category.description %>
+  </p>
+
+  <h3>Products in this category:</h3>
+  <ul>
+    <% category.products.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+</div>
+
+</div>
